@@ -1,0 +1,10 @@
+---
+label: page
+hide_body: true
+fields:
+- name: gallery
+  type: image_gallery
+  config: {}
+  label: Gallery
+pages:
+- src/content/pages/Gallery.md
