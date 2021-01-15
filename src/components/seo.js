@@ -1,4 +1,5 @@
-import { Title, Link, Meta } from 'react-head';
+import React from "react";
+import { Title, Link, Meta } from "react-head";
 
 const SEO = (props) => (
   <>
@@ -12,8 +13,14 @@ const SEO = (props) => (
     <Meta property="og:url" content="https://ryansphotography.co.za/" />
     <Meta property="og:site_name" content="Ryan's Photography" />
     <Meta property="og:type" content="website" />
-    <Meta property="og:description" content="Ryan Dammert is a wedding & lifestyle photographer in Oudtshoorn, South Africa. He operates in the Klein Karoo and Eden District." />
-    <Meta property="og:image" content="https://ryansphotography.co.za/social.png" />
+    <Meta
+      property="og:description"
+      content="Ryan Dammert is a wedding & lifestyle photographer in Oudtshoorn, South Africa. He operates in the Klein Karoo and Eden District."
+    />
+    <Meta
+      property="og:image"
+      content="https://ryansphotography.co.za/social.png"
+    />
     <Meta property="og:image:type" content="image/png" />
     <Meta property="og:image:width" content="1200" />
     <Meta property="og:image:height" content="675" />
@@ -21,11 +28,17 @@ const SEO = (props) => (
     <Meta name="twitter:site" content="@ryansphotography" />
     <Meta name="twitter:url" content="https://ryansphotography.co.za/" />
     <Meta name="twitter:title" content="Ryan's Photography" />
-    <Meta name="twitter:description" content="Ryan Dammert is a wedding & lifestyle photographer in Oudtshoorn, South Africa. He operates in the Klein Karoo and Eden District." />
-    <Meta name="twitter:image" content="https://ryansphotography.co.za/social.png" />
+    <Meta
+      name="twitter:description"
+      content="Ryan Dammert is a wedding & lifestyle photographer in Oudtshoorn, South Africa. He operates in the Klein Karoo and Eden District."
+    />
+    <Meta
+      name="twitter:image"
+      content="https://ryansphotography.co.za/social.png"
+    />
     {/* <Meta name="google-site-verification" content="FMD5P3UeGdI3GuWIJdILcayBrsFpOP3MneqJoDJ3uss" /> */}
     <Link rel="canonical" content="https://ryansphotography.co.za" />
   </>
 );
 
-export default SEO
+export default SEO;

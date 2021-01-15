@@ -6,20 +6,11 @@ module.exports = {
     siteUrl: `https://ryansphotography.co.za`,
   },
   plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `uploads`,
-        path: `${__dirname}/static/uploads`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src`,
-      },
-    },
+    `gatsby-plugin-react-head`,
+    `gatsby-plugin-postcss`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,38 +19,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        name: `content`,
-        path: `${__dirname}/src/content`,
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          `gatsby-remark-relative-images`,
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 720,
-            },
-          },
-        ]
-      },
-    },
-    `gatsby-plugin-provide-react`,
-    `gatsby-plugin-react-head`,
-    `gatsby-plugin-postcss`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-sitemap`,
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: 'https://www.ryansphotography.co.za',
-        sitemap: 'https://www.ryansphotography.co.za/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
+        host: "https://www.ryansphotography.co.za",
+        sitemap: "https://www.ryansphotography.co.za/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     // {
@@ -97,28 +61,28 @@ module.exports = {
             {
               family: "Playfair Display SC",
               variants: ["400"],
-              fontDisplay: 'swap',
-              strategy: 'selfHosted'
+              fontDisplay: "swap",
+              strategy: "selfHosted",
             },
             {
               family: "Source Sans Pro",
               variants: ["400"],
-              fontDisplay: 'swap',
-              strategy: 'selfHosted'
+              fontDisplay: "swap",
+              strategy: "selfHosted",
             },
           ],
         },
-        formats: ['woff2', 'woff'],
+        formats: ["woff2", "woff"],
         useMinify: true,
         usePreload: true,
         usePreconnect: false,
       },
     },
     {
-      resolve: 'gatsby-plugin-brotli',
+      resolve: "gatsby-plugin-brotli",
       options: {
-        extensions: ['html', 'css', 'js']
-      }
+        extensions: ["html", "css", "js"],
+      },
     },
   ],
-}
+};
